@@ -1,4 +1,4 @@
-﻿internal class Program
+﻿internal class ParsingExercise
 {
     private static void Main(string[] args)
     {

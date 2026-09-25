@@ -12,10 +12,9 @@
                 Console.WriteLine("Input cannot be empty. Please enter a valid number.");
                 str = Console.ReadLine();
             }
-            try
-            {
-                var fa = int.Parse(str ?? "0");
 
+            if (int.TryParse(str ?? "0", out int fa))
+            {
                 if (fa > 0)
                 {
                     Console.WriteLine("Positive number: " + fa);
@@ -27,13 +26,10 @@
                 else
                 {
                     Console.WriteLine("Zero: " + fa);
-                }
+                } 
+                break;
             }
-
-
-
-            catch (FormatException)
-            {
+            else {
                 Console.WriteLine("Invalid input. Please enter a valid number.");
                 continue;
             }
